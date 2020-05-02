@@ -40,6 +40,7 @@ public class Email {
     			+ "\nENTER DEPARTMENT: ");
         Scanner input = new Scanner(System.in);
     	int choice = input.nextInt();
+        input.close();
     	if (choice == 1) {
     		return "Sales";
     	} else if (choice == 2) {
@@ -53,8 +54,7 @@ public class Email {
     
     // generate a random password
     private String randomPassword(int length) {
-    	String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    			+ "abcdefghijklmnopurstuvwxyz!@#$%^&*()0123456789";
+    	String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopurstuvwxyz!@#$%^&*()0123456789";
     	char[] password = new char[length];
     	for (int i = 0; i < length; i++) {
     		int rand = (int) (Math.random() * passwordSet.length());
@@ -95,7 +95,7 @@ public class Email {
     
     public void displayInfo() {
     	System.out.println("FULL NAME: " + firstName + " " + lastName +
-    			"\nCOMPANY EMAIL: " + email + 
-    			"\nMAILBOX CAPACITY: " + mailboxCapacity + "MB");
+    			           "\nCOMPANY EMAIL: " + email + 
+    			           "\nMAILBOX CAPACITY: " + mailboxCapacity + "MB");
     }
 }
